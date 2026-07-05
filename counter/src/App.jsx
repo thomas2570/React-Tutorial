@@ -12,12 +12,20 @@ function App() {
   //let counter = 15
 
   const addValue = () => {
-    console.log("clicked", Math.random());
+    // console.log("clicked", Math.random());
     
     // counter = counter + 1
-
-    setCounter(counter + 1)
+    if (counter < 27) {
+      setCounter(counter + 1)
+    }
     
+  }
+
+  const removeValue = () => {
+    if (counter > 0) {
+      setCounter(counter - 1)
+    }
+  
   }
   
   return (
@@ -29,7 +37,9 @@ function App() {
       onClick={addValue}
       >Add value: {counter}</button>
       <br />
-      <button>remove value {counter}</button>
+      <button
+      onClick={removeValue}
+      >remove value {counter}</button>
       <p>footer: {counter}</p>
     </>
   )
