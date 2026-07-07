@@ -11,7 +11,8 @@ function App() {
   return (
     <>
      <h1 className='bg-green-400 text-black p4 rounded-xl '>Tailwind Test</h1>
-     <Card />
+     <Card username="Thomas" btnText='CLICK ME' />
+     <Card username="Ramesh" btnText='visit me' />
     </>
   )
 }
